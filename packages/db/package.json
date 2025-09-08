@@ -1,0 +1,22 @@
+{
+  "name": "@workspace/db",
+  "type": "module",
+  "exports": {
+    "./auth-db": {
+      "types": "./dist/auth-db/index.d.ts",
+      "default": "./dist/auth-db/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "drizzle-orm": "latest",
+    "drizzle-zod": "latest",
+    "@neondatabase/serverless": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
