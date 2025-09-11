@@ -14,7 +14,7 @@ export const auth = betterAuth({
         process.env.APP1_URL,
         process.env.APP2_URL,
         // Add your production domains
-      ].filter(Boolean) as string[]
+      ].filter((url): url is string => Boolean(url))
     : [
         "http://localhost:3001", // app1
         "http://localhost:3002", // app2
